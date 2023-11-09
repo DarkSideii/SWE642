@@ -1,0 +1,86 @@
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+label, input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+button {
+    background-color: #FFCC33; /* GMU Gold Button */
+    color: #006633; /* GMU Green Text on Button */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e5b025; 
+}
+
+/* Style for the required indicator */
+.required-label::after {
+    content: "*";
+    color: red; 
+    margin-left: 5px; 
+}
+
+.checkbox-label, .radio-label {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.feedback-box, .preferences-box {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #FFCC33; /* GMU Gold Border */
+    background-color: #006633; /* GMU Green Background */
+    color: #FFCC33; /* GMU Gold Text */
+}
+
+/* Adjust the form container to have padding only at top and bottom */
+.form-container {
+    padding: 20px 0; /* Top and bottom padding only, remove right and left */
+    background-color: #006633; /* GMU Green Background */
+    color: #FFCC33; /* GMU Gold Text */
+    max-height: 100vh; /* Maximum height of the viewport */
+    overflow-y: scroll; /* Add vertical scrollbar if needed */
+    margin: 0; /* Remove any default margins */
+    width: 100vw; /* Make sure it takes full viewport width */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+.image-container {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px 0; /* Add top and bottom padding */
+}
+
+/* Style for the scrollbar (for WebKit-based browsers) */
+.form-container::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.form-container::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background */
+}
+
+.form-container::-webkit-scrollbar-thumb {
+    background: #FFCC33; /* GMU Gold Color for the thumb */
+}
+
+.form-container::-webkit-scrollbar-thumb:hover {
+    background: #e5b025; /* GMU Gold Color on hover */
+}
+
+/* Ensure body and html elements take full height and no extra space */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,75 @@
+<div class="form-container">
+    <form #surveyForm="ngForm" (ngSubmit)="onSubmit(surveyForm)" class="form-section" ngNativeValidate>
+        <div class="image-container">
+            <img src="assets/logo2.png" alt="GMU mascot">
+        </div>
+
+        <div class="feedback-box">
+            <label for="firstName"class="required-label">First Name:</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+        
+            <label for="lastName"class="required-label">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+        
+            <label for="email"class="required-label">Email:</label>
+            <input type="email" id="email" name="email"  [(ngModel)]="user.email" required placeholder="example@domain.com">
+        
+            <label for="address"class="required-label">Address:</label>
+            <input type="text" id="address" name="address" [(ngModel)]="user.address" required>
+        
+            <label for="city" class="required-label">City:</label>
+            <input type="text" id="city" name="city" [(ngModel)]="user.city" required>
+        
+            <label for="state" class="required-label">State:</label>
+            <input type="text" id="state" name="state" [(ngModel)]="user.state" required>
+       
+            <label for="zip" class="required-label">Zip:</label>
+            <input type="text" id="zip" name="zip" [(ngModel)]="user.zip" pattern="\d{5}(-\d{4})?" title="Please enter a valid ZIP code." required>
+        
+            <label for="tel" class="required-label">Telephone Number:</label>
+            <input type="tel" id="tel" name="tel" [(ngModel)]="user.tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890" required placeholder="555-555-5555">
+        
+            <label for="date" class="required-label">Date of Survey:</label>
+            <input type="date" id="date" name="date" [(ngModel)]="user.date" required placeholder="YYYY-MM-DD">
+        </div>
+
+        <div class="preferences-box">
+            <!-- Giving the user options to select from -->
+            <h5>What did you like most about the campus?</h5>
+            <label class="checkbox-label"><input type="checkbox" id="students" name="preferences" value="students"> Students</label>
+            <label class="checkbox-label"><input type="checkbox" id="location" name="preferences" value="location"> Location</label>
+            <label class="checkbox-label"><input type="checkbox" id="campus" name="preferences" value="campus"> Campus</label>
+            <label class="checkbox-label"><input type="checkbox" id="atmosphere" name="preferences" value="atmosphere"> Atmosphere</label>
+            <label class="checkbox-label"><input type="checkbox" id="dorm_rooms" name="preferences" value="dorm_rooms"> Dorms</label>
+            <label class="checkbox-label"><input type="checkbox" id="sports" name="preferences" value="sports"> Sports</label>
+            <br><br>
+            <h5>How did you become interested in the university?</h5>
+            <label class="radio-label"><input type="radio" id="friends" name="interest" value="friends"> Friends</label>
+            <label class="radio-label"><input type="radio" id="television" name="interest" value="television"> Television</label>
+            <label class="radio-label"><input type="radio" id="internet" name="interest" value="internet"> Internet</label>
+            <label class="radio-label"><input type="radio" id="other" name="interest" value="other"> Other</label>
+            <br><br>
+            <label for="recommendation"><h5>Likelihood Of Recommending This School To Other Students:</h5></label>
+            <input list="recommending" id="recommendation" name="recommendation">
+            <datalist id="recommending">
+                <option value="Very Likely">
+                <option value="Likely">
+                <option value="Unlikely">
+            </datalist>
+        </div>
+
+        <!-- Large text boxes for users-->
+        <div class="feedback-box">
+            <h3>Provide Your Feedback</h3>
+            <p>How was your campus visit?</p>
+            <textarea rows="5" cols="50" placeholder="Type your feedback here..."></textarea>
+            
+            <label for="additionalComments">Additional Comments:</label>
+            <textarea id="additionalComments" rows="5" cols="50" placeholder="Type any additional comments here..."></textarea>
+            <br>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="button" (click)="onReset(surveyForm)">Reset</button>
+    </form>
+</div>
