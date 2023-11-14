@@ -1,0 +1,32 @@
+.table td {
+  color: gold;
+}
+
+.table tr {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.table thead th {
+  border-bottom: 2px solid white;
+}
+
+.table thead th {
+  background-color: #004400;
+  color: gold;
+}
+
+.survey-table td {
+  color: gold;
+}
+
+.survey-table tr {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.survey-table thead th {
+  border-bottom: 2px solid white;
+  background-color: #004400; /* Adjust the color to match your theme */
+  color: gold;
+}

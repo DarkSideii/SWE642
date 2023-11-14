@@ -1,0 +1,42 @@
+<div *ngIf="surveys.length > 0; else noSurveys">
+    <table class="table survey-table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>Telephone</th>
+          <th>Date of Survey</th>
+          <th>Interest Origin</th>
+          <th>Recommendation Likelihood</th>
+          <th>Feedback</th>
+          <th>Additional Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let survey of surveys">
+          <td>{{ survey.firstName }}</td>
+          <td>{{ survey.lastName }}</td>
+          <td>{{ survey.email }}</td>
+          <td>{{ survey.address }}</td>
+          <td>{{ survey.city }}</td>
+          <td>{{ survey.state }}</td>
+          <td>{{ survey.zip }}</td>
+          <td>{{ survey.telephone }}</td>
+          <td>{{ survey.dateOfSurvey | date: 'MM/dd/yyyy' }}</td>
+          <td>{{ survey.interestOrigin }}</td>
+          <td>{{ survey.recommendationLikelihood }}</td>
+          <td>{{ survey.feedback }}</td>
+          <td>{{ survey.additionalComments }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noSurveys>
+    <p>No surveys found.</p>
+  </ng-template>
+  

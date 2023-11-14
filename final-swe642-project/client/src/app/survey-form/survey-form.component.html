@@ -1,0 +1,75 @@
+<div class="form-container">
+    <form #surveyForm="ngForm" (ngSubmit)="onSubmit(surveyForm)" class="form-section" ngNativeValidate>
+        <div class="image-container">
+            <img src="assets/logo2.png" alt="GMU mascot">
+        </div>
+
+        <div class="feedback-box">
+            <label for="firstName"class="required-label">First Name:</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+        
+            <label for="lastName"class="required-label">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+        
+            <label for="email"class="required-label">Email:</label>
+            <input type="email" id="email" name="email"  [(ngModel)]="user.email" required placeholder="example@domain.com">
+        
+            <label for="address"class="required-label">Address:</label>
+            <input type="text" id="address" name="address" [(ngModel)]="user.address" required>
+        
+            <label for="city" class="required-label">City:</label>
+            <input type="text" id="city" name="city" [(ngModel)]="user.city" required>
+        
+            <label for="state" class="required-label">State:</label>
+            <input type="text" id="state" name="state" [(ngModel)]="user.state" required>
+       
+            <label for="zip" class="required-label">Zip:</label>
+            <input type="text" id="zip" name="zip" [(ngModel)]="user.zip" pattern="\d{5}(-\d{4})?" title="Please enter a valid ZIP code." required>
+        
+            <label for="telephone" class="required-label">Telephone Number:</label>
+            <input type="telephone" id="telephone" name="telephone" [(ngModel)]="user.telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890" required placeholder="555-555-5555">
+        
+            <label for="date" class="required-label">Date of Survey:</label>
+            <input type="date" id="dateOfSurvey" name="dateOfSurvey" [(ngModel)]="user.dateOfSurvey" required placeholder="YYYY-MM-DD">
+        </div>
+
+        <div class="preferences-box">
+            <!-- Giving the user options to select from -->
+            <h5>What did you like most about the campus?</h5>
+            <label class="checkbox-label"><input type="checkbox" id="students" name="students" value="students" [(ngModel)]="user.students"> Students</label>
+            <label class="checkbox-label"><input type="checkbox" id="location" name="location" value="location" [(ngModel)]="user.location"> Location</label>
+            <label class="checkbox-label"><input type="checkbox" id="campus" name="campus" value="campus" [(ngModel)]="user.campus"> Campus</label>
+            <label class="checkbox-label"><input type="checkbox" id="atmosphere" name="atmosphere" value="atmosphere" [(ngModel)]="user.atmosphere"> Atmosphere</label>
+            <label class="checkbox-label"><input type="checkbox" id="dorms" name="dorms" value="dorms" [(ngModel)]="user.dorms"> Dorms</label>
+            <label class="checkbox-label"><input type="checkbox" id="sports" name="sports" value="sports" [(ngModel)]="user.sports"> Sports</label>
+            <br><br>
+            <h5>How did you become interested in the university?</h5>
+            <label class="radio-label"><input type="radio" id="friends" name="interestOrigin" value="friends" [(ngModel)]="user.interestOrigin"> Friends</label>
+            <label class="radio-label"><input type="radio" id="television" name="interestOrigin" value="television" [(ngModel)]="user.interestOrigin"> Television</label>
+            <label class="radio-label"><input type="radio" id="internet" name="interestOrigin" value="internet" [(ngModel)]="user.interestOrigin"> Internet</label>
+            <label class="radio-label"><input type="radio" id="other" name="interestOrigin" value="other" [(ngModel)]="user.interestOrigin"> Other</label>
+            <br><br>
+            <label for="recommendation"><h5>Likelihood Of Recommending This School To Other Students:</h5></label>
+            <input list="recommending" id="recommendation" name="recommendationLikelihood"  [(ngModel)]="user.recommendationLikelihood">
+            <datalist id="recommending">
+                <option value="very likely">
+                <option value="likely">
+                <option value="unlikely">
+            </datalist>
+        </div>
+
+        <!-- Large text boxes for users-->
+        <div class="feedback-box">
+            <h3>Provide Your Feedback</h3>
+            <p>How was your campus visit?</p>
+            <textarea id="feedback" name="feedback" rows="5" cols="50" placeholder="Type your feedback here..." [(ngModel)]="user.feedback"></textarea>
+            
+            <label for="additionalComments">Additional Comments:</label>
+            <textarea id="additionalComments" name="additionalComments" rows="5" cols="50" placeholder="Type any additional comments here..." [(ngModel)]="user.additionalComments"></textarea>
+            <br>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="button" (click)="onReset(surveyForm)">Reset</button>
+    </form>
+</div>
