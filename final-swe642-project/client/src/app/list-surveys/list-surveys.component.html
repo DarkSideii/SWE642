@@ -19,19 +19,19 @@
       </thead>
       <tbody>
         <tr *ngFor="let survey of surveys">
-          <td>{{ survey.firstName }}</td>
+          <td>{{ survey.firstName}}</td>
           <td>{{ survey.lastName }}</td>
           <td>{{ survey.email }}</td>
-          <td>{{ survey.address }}</td>
-          <td>{{ survey.city }}</td>
-          <td>{{ survey.state }}</td>
-          <td>{{ survey.zip }}</td>
-          <td>{{ survey.telephone }}</td>
+          <td>{{ survey.address}}</td>
+          <td>{{ survey.city}}</td>
+          <td>{{ survey.state}}</td>
+          <td>{{ survey.zip}}</td>
+          <td>{{ survey.telephone}}</td>
           <td>{{ survey.dateOfSurvey | date: 'MM/dd/yyyy' }}</td>
-          <td>{{ survey.interestOrigin }}</td>
-          <td>{{ survey.recommendationLikelihood }}</td>
-          <td>{{ survey.feedback }}</td>
-          <td>{{ survey.additionalComments }}</td>
+          <td>{{ survey.interestOrigin || 'N/A' }}</td>
+          <td>{{ survey.recommendationLikelihood || 'N/A' }}</td>
+          <td>{{ survey.feedback || 'N/A' }}</td>
+          <td>{{ survey.additionalComments || 'N/A' }}</td>
         </tr>
       </tbody>
     </table>
