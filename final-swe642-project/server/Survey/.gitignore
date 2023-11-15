@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Angular cache ###
+final-swe642-project/client/.angular/cache/
