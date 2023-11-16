@@ -91,11 +91,11 @@ public class Survey {
 
     // Enums for the 'interest_origin' and 'recommendation_likelihood' fields
     public enum InterestOrigin {
-        friends, television, internet, other, Friends, Television, Internet, Other, NULL
+        Friends, Television, Internet, Other, NULL
     }
 
     public enum RecommendationLikelihood {
-        very_likely, likely, unlikely, Very_Likely, Likely, Unlikely, NULL
+        Very_Likely, Likely, Unlikely, NULL
     }
 
     // Getters
@@ -182,79 +182,79 @@ public class Survey {
     public void setId(Long id) {
         this.id = id;
     }
-    
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    
+
     public void setAddress(String address) {
         this.address = address;
     }
-    
+
     public void setCity(String city) {
         this.city = city;
     }
-    
+
     public void setState(String state) {
         this.state = state;
     }
-    
+
     public void setZip(String zip) {
         this.zip = zip;
     }
-    
+
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
-    
+
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     public void setDateOfSurvey(Date dateOfSurvey) {
         this.dateOfSurvey = dateOfSurvey;
     }
-    
+
     public void setStudents(boolean students) {
         this.students = students;
     }
-    
+
     public void setLocation(boolean location) {
         this.location = location;
     }
-    
+
     public void setCampus(boolean campus) {
         this.campus = campus;
     }
-    
+
     public void setAtmosphere(boolean atmosphere) {
         this.atmosphere = atmosphere;
     }
-    
+
     public void setDorms(boolean dorms) {
         this.dorms = dorms;
     }
-    
+
     public void setSports(boolean sports) {
         this.sports = sports;
     }
-    
+
     public void setInterestOrigin(InterestOrigin interestOrigin) {
         this.interestOrigin = interestOrigin;
     }
-    
+
     public void setRecommendationLikelihood(RecommendationLikelihood recommendationLikelihood) {
         this.recommendationLikelihood = recommendationLikelihood;
     }
-    
+
     public void setFeedback(String feedback) {
         this.feedback = feedback;
     }
-    
+
     public void setAdditionalComments(String additionalComments) {
         this.additionalComments = additionalComments;
     }

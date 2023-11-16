@@ -1,3 +1,7 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Description: This controls the routing of the website.
+ */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListSurveysComponent } from './list-surveys/list-surveys.component';

@@ -1,3 +1,8 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Component Description: This component is responsible for displaying the welcome message, allowing users to click links, and disappearing when a link is clicked.
+ */
+
 import { Component } from '@angular/core';
 import { Router, Event as RouterEvent, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';

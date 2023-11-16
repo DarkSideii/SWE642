@@ -33,10 +33,10 @@
           <td>{{ survey.zip}}</td>
           <td>{{ survey.telephone}}</td>
           <td>{{ survey.dateOfSurvey | date: 'MM/dd/yyyy' }}</td>
-          <td>{{ survey.interestOrigin || 'N/A' }}</td>
-          <td>{{ survey.recommendationLikelihood || 'N/A' }}</td>
-          <td>{{ survey.feedback || 'N/A' }}</td>
-          <td>{{ survey.additionalComments || 'N/A' }}</td>
+          <td>{{ survey.interestOrigin || 'NULL' }}</td>
+          <td>{{ survey.recommendationLikelihood || 'NULL' }}</td>
+          <td>{{ survey.feedback || 'NULL' }}</td>
+          <td>{{ survey.additionalComments || 'NULL' }}</td>
         </tr>
       </tbody>
     </table>

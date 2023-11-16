@@ -1,9 +1,14 @@
+<!-- 
+    Group Members: Brian Zhang, Nicholas Harvey
+    Template Description: This template displays a the form and allows users to enter in their data. 
+-->
+
 <div class="form-container">
     <form #surveyForm="ngForm" (ngSubmit)="onSubmit(surveyForm)" class="form-section" ngNativeValidate>
         <div class="image-container">
             <img src="assets/logo2.png" alt="GMU mascot">
         </div>
-
+        <!-- Required fields -->
         <div class="feedback-box">
             <label for="firstName"class="required-label">First Name:</label>
             <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
@@ -43,18 +48,22 @@
             <label class="checkbox-label"><input type="checkbox" id="dorms" name="dorms" value="dorms" [(ngModel)]="user.dorms"> Dorms</label>
             <label class="checkbox-label"><input type="checkbox" id="sports" name="sports" value="sports" [(ngModel)]="user.sports"> Sports</label>
             <br><br>
+            <!-- User can only select one option -->
             <h5>How did you become interested in the university?</h5>
-            <label class="radio-label"><input type="radio" id="friends" name="interestOrigin" value="friends" [(ngModel)]="user.interestOrigin"> Friends</label>
-            <label class="radio-label"><input type="radio" id="television" name="interestOrigin" value="television" [(ngModel)]="user.interestOrigin"> Television</label>
-            <label class="radio-label"><input type="radio" id="internet" name="interestOrigin" value="internet" [(ngModel)]="user.interestOrigin"> Internet</label>
-            <label class="radio-label"><input type="radio" id="other" name="interestOrigin" value="other" [(ngModel)]="user.interestOrigin"> Other</label>
+            <label class="radio-label"><input type="radio" id="friends" name="interestOrigin" value="Friends" [(ngModel)]="user.interestOrigin"> Friends</label>
+            <label class="radio-label"><input type="radio" id="television" name="interestOrigin" value="Television" [(ngModel)]="user.interestOrigin"> Television</label>
+            <label class="radio-label"><input type="radio" id="internet" name="interestOrigin" value="Internet" [(ngModel)]="user.interestOrigin"> Internet</label>
+            <label class="radio-label"><input type="radio" id="other" name="interestOrigin" value="Other" [(ngModel)]="user.interestOrigin"> Other</label>
             <br><br>
-            <label for="recommendation"><h5>Likelihood Of Recommending This School To Other Students:</h5></label>
-            <input list="recommending" id="recommendation" name="recommendationLikelihood"  [(ngModel)]="user.recommendationLikelihood">
+            <label for="recommendation">
+                <h5>Likelihood Of Recommending This School To Other Students:</h5>
+            </label>
+            <input list="recommending" id="recommendation" name="recommendationLikelihood" 
+                    [(ngModel)]="user.recommendationLikelihood" autocomplete="off">
             <datalist id="recommending">
-                <option value="very_likely">
-                <option value="likely">
-                <option value="unlikely">
+                <option value="Very Likely">
+                <option value="Likely">
+                <option value="Unlikely">
             </datalist>
         </div>
 
@@ -70,6 +79,6 @@
         </div>
 
         <button type="submit">Submit</button>
-        <button type="button" (click)="onReset(surveyForm)">Reset</button>
+        <button type="button" (click)="onReset(surveyForm)">Cancel</button>
     </form>
 </div>

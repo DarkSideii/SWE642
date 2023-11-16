@@ -1,3 +1,7 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Component Description: This component is responsible for verifying call survey entries. It is also the code for resetting the form and submitting the json to the db. 
+ */
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -70,10 +74,23 @@ export class SurveyFormComponent {
       window.alert(errorMessages);
       return; // Stop the submission since there are errors
     }
-    // If there are no errors, proceed with form submission
-    console.log('Form data', form.value);
-    // After submission logic, navigate to the root page
-    
+
+    // Define the mapping with explicit types
+    const recommendationMapping: { [key: string]: string } = {
+        'Very Likely': 'Very_Likely',
+        'Likely': 'Likely',
+        'Unlikely': 'Unlikely'
+    };
+
+    // Ensure the value is a string before using it as a key
+    const recommendationValue = form.value.recommendationLikelihood as string;
+
+    // Safely use the value as a key in the mapping
+    const mappedRecommendationValue = recommendationMapping[recommendationValue];
+
+    if (mappedRecommendationValue) {
+        form.value.recommendationLikelihood = mappedRecommendationValue;
+    }
     // form submission logic
     this.router.navigate(['/']);
     if (errorMessages.length === 0) {

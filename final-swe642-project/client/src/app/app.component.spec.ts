@@ -1,3 +1,8 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Test Description: This is use for testing the welcome page functionality. 
+ */
+
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
