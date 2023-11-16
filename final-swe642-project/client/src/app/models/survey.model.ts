@@ -21,7 +21,7 @@ export interface Survey {
   dorms: boolean;
   sports: boolean;
   interestOrigin?: 'friends' | 'television' | 'internet' | 'other';
-  recommendationLikelihood?: 'very_Likely' | 'likely' | 'unlikely' | 'not_sure';
+  recommendationLikelihood?: 'very_Likely' | 'likely' | 'unlikely';
   feedback?: string;
   additionalComments?: string;
 }

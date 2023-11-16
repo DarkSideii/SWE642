@@ -91,11 +91,11 @@ public class Survey {
 
     // Enums for the 'interest_origin' and 'recommendation_likelihood' fields
     public enum InterestOrigin {
-        friends, television, internet, other, NULL
+        friends, television, internet, other, Friends, Television, Internet, Other, NULL
     }
 
     public enum RecommendationLikelihood {
-        very_likely, likely, unlikely, NULL
+        very_likely, likely, unlikely, Very_Likely, Likely, Unlikely, NULL
     }
 
     // Getters

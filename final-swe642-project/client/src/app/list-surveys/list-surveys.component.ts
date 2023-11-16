@@ -1,3 +1,8 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Component Description: This component is responsible for listing all survey entries. It retrieves survey data using the SurveyService and displays it. The component handles both the successful retrieval of data and error scenarios.
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { Survey } from '../models/survey.model';
 import { SurveyService } from '../services/survey.service';
