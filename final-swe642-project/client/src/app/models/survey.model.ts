@@ -1,3 +1,7 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Interface Description: This interface defines the structure of a 'Survey' object in the application. It includes various properties corresponding to survey data such as personal information, survey responses, and optional fields for additional details.
+ */
 
 export interface Survey {
   id?: number;

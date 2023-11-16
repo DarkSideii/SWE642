@@ -1,3 +1,8 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Program Description: This class defines the 'Survey' entity model for the application. It includes various attributes related to survey details, such as personal information and survey responses, along with getters and setters for each attribute.
+ */
+
 package com.GMU.Survey.model;
 
 import java.util.Date;
@@ -86,11 +91,11 @@ public class Survey {
 
     // Enums for the 'interest_origin' and 'recommendation_likelihood' fields
     public enum InterestOrigin {
-        Friends, Television, Internet, Other, NULL
+        friends, television, internet, other, NULL
     }
 
     public enum RecommendationLikelihood {
-        Very_Likely, Likely, Unlikely, NULL
+        very_likely, likely, unlikely, NULL
     }
 
     // Getters

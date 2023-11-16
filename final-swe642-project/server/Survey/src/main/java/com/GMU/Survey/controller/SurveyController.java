@@ -1,3 +1,7 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Program Description: This controller handles HTTP requests for survey operations. It provides endpoints for creating a new survey and retrieving all surveys, interfacing with the SurveyService to process these requests.
+ */
 package com.GMU.Survey.controller;
 
 import java.util.List;

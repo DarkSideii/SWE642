@@ -1,3 +1,8 @@
+<!-- 
+    Group Members: Brian Zhang, Nicholas Harvey
+    Template Description: This template displays a table of survey entries if any are present. It iterates over the 'surveys' array to populate the table and shows a message when no surveys are found.
+-->
+
 <div *ngIf="surveys.length > 0; else noSurveys">
     <table class="table survey-table">
       <thead>

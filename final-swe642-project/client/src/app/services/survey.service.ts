@@ -1,3 +1,8 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Service Description: This service provides functionalities to interact with the backend for survey operations. It includes methods to submit a new survey and retrieve all surveys from the server.
+ */
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
