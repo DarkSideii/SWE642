@@ -1,3 +1,8 @@
+/**
+ * Group Members: Brian Zhang, Nicholas Harvey
+ * Test Description: This is use for testing the component 
+ */
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SurveyFormComponent } from './survey-form.component';
