@@ -21,9 +21,10 @@ COPY --from=build /app/target/*.jar /app/app.jar
 EXPOSE 8080
 
 # Add environment variables for MySQL connection
-ENV SPRING_DATASOURCE_URL=jdbc:mysql://mysql-host:3306/survey_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+ENV SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/survey_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
 ENV SPRING_DATASOURCE_USERNAME=root
 ENV SPRING_DATASOURCE_PASSWORD=White771!!
+
 
 # Run the jar file
 ENTRYPOINT ["java","-jar","/app/app.jar"]

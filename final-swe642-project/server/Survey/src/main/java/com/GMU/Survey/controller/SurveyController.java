@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.GMU.Survey.model.Survey;
 import com.GMU.Survey.service.SurveyService;
 
-@CrossOrigin(origins = "http://localhost:4200") // URL of the Angular app
+@CrossOrigin(origins = { "http://localhost", "http://localhost:8080" })
 @RestController
 @RequestMapping("/api/surveys")
 public class SurveyController {
