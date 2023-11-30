@@ -1,3 +1,5 @@
+# Group Members: Brian Zhang, Nicholas Harvey
+
 # Start with a base image that contains Java and Maven
 FROM maven:3.8.4-openjdk-17-slim as build
 
@@ -23,7 +25,8 @@ EXPOSE 8080
 # Add environment variables for MySQL connection
 ENV SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/survey_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
 ENV SPRING_DATASOURCE_USERNAME=root
-ENV SPRING_DATASOURCE_PASSWORD=White771!!
+# Need to enter password
+ENV SPRING_DATASOURCE_PASSWORD= 
 
 
 # Run the jar file

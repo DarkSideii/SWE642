@@ -1,3 +1,5 @@
+# Group Members: Brian Zhang, Nicholas Harvey
+
 # Stage 1: Build the Angular application
 FROM node:latest as build
 

@@ -1,3 +1,4 @@
+# Group Members: Brian Zhang, Nicholas Harvey
 version: '3.8'
 
 services:
@@ -19,7 +20,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/survey_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: White771!!
+      SPRING_DATASOURCE_PASSWORD: # Need to enter password
     depends_on:
       - mysql
 
